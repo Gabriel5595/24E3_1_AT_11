@@ -1,0 +1,166 @@
+/* Estilos gerais do container principal */
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+/* Container superior: Global Menu e Header lado a lado */
+.topContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px; /* Cria uma separação entre Global Menu e Header */
+}
+
+.globalMenuContainer {
+    flex: 3; /* Faz com que ambos ocupem o mesmo espaço e tamanho */
+    background-color: #444;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: 60px;
+}
+
+.headerContainer {
+    flex: 1;
+    background-color: #333; /* Mantém uma cor diferente para o Header */
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+}
+
+/* Estilização do botão no Global Menu */
+.menuButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    width: 25px;
+}
+
+.menuButton div {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+}
+
+/* Context Menu */
+.CC {
+    background-color: #555;
+    padding: 15px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Main Content, Ads e Footer em sequência */
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mainContextContainer {
+    background-color: #666;
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.adsContainer {
+    background-color: #777;
+    padding: 15px;
+    text-align: center;
+}
+
+.footerContainer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+@media (min-width: 1024px) {
+    /* Esconde o botão de menu em telas grandes */
+    .menuButton {
+        display: none;
+    }
+
+    /* O Context Menu sempre visível em telas grandes */
+    .ContextMenuContainer {
+        display: block;
+    }
+
+    .mainContainer {
+        height: 100vh;
+        display: grid;
+        grid-template-areas: 
+            "header header header"
+            "globalmenu globalmenu ads"
+            "contextmenu maincontent ads"
+            "contextmenu maincontent ads"
+            "contextmenu maincontent ads"
+            "contextmenu maincontent ads"
+            "footer footer footer";
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: auto; 
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .headerContainer {
+        height: auto;
+        grid-area: header;
+        background-color: #333;
+        padding: 20px;
+        text-align: center;
+        color: white;
+    }
+
+    .globalMenuContainer {
+        grid-area: globalmenu;
+        background-color: #444;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+    }
+
+    .adsContainer {
+        grid-area: ads;
+        background-color: #777;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .ContextMenuContainer {
+        grid-area: contextmenu;
+        background-color: #555;
+        padding: 15px;
+        text-align: center;
+        display: block;
+    }
+
+    .mainContextContainer {
+        grid-area: maincontent;
+        background-color: #666;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .footerContainer {
+        grid-area: footer;
+        background-color: #333;
+        padding: 20px;
+        text-align: center;
+        color: white;
+    }
+}

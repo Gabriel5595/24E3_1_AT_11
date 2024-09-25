@@ -1,0 +1,7 @@
+.contextMenu {
+    grid-area: contextmenu;
+    text-align: center;
+    background-color: #555;
+    color: white;
+    padding: 15px;
+}

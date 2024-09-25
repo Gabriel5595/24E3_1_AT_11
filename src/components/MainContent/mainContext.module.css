@@ -1,0 +1,7 @@
+.mainContent {
+    grid-area: maincontent;
+    text-align: center;
+    background-color: #666;
+    color: white;
+    padding: 20px;
+}
