@@ -1,4 +1,3 @@
-/* Estilos gerais do container principal */
 .mainContainer {
     display: flex;
     flex-direction: column;
@@ -6,16 +5,15 @@
     gap: 10px;
 }
 
-/* Container superior: Global Menu e Header lado a lado */
 .topContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px; /* Cria uma separação entre Global Menu e Header */
+    gap: 10px;
 }
 
 .globalMenuContainer {
-    flex: 3; /* Faz com que ambos ocupem o mesmo espaço e tamanho */
+    flex: 3;
     background-color: #444;
     padding: 15px;
     display: flex;
@@ -26,7 +24,7 @@
 
 .headerContainer {
     flex: 1;
-    background-color: #333; /* Mantém uma cor diferente para o Header */
+    background-color: #333;
     padding: 15px;
     display: flex;
     align-items: center;
@@ -34,7 +32,6 @@
     height: 60px;
 }
 
-/* Estilização do botão no Global Menu */
 .menuButton {
     background: none;
     border: none;
@@ -53,7 +50,6 @@
     background-color: white;
 }
 
-/* Context Menu */
 .CC {
     background-color: #555;
     padding: 15px;
@@ -61,7 +57,6 @@
     margin-top: 10px;
 }
 
-/* Main Content, Ads e Footer em sequência */
 .contentContainer {
     display: flex;
     flex-direction: column;
@@ -88,12 +83,10 @@
 }
 
 @media (min-width: 1024px) {
-    /* Esconde o botão de menu em telas grandes */
     .menuButton {
         display: none;
     }
 
-    /* O Context Menu sempre visível em telas grandes */
     .ContextMenuContainer {
         display: block;
     }
